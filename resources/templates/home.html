@@ -3,11 +3,22 @@
     Satan says...
 </header>
 <body>
+{{#name}}
     Hello, {{name}}!
-    <br>
-    <br>
+<form action="/logout" method="post">
+        <button type="sumbit">Logout</button>
+</form>
+{{/name}}
+{{^name}}
     <a href="/login">Login</a>
+{{/name}}
+<br>
+<br>
+Past users:
+<ul>
+{{#pastUsers}}
+<li>{{name}}</li>
+{{/pastUsers}}
+</ul>
 </body>
-
-
 </html>
